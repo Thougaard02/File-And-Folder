@@ -195,9 +195,23 @@ namespace File_And_Folder
             {
                 Console.WriteLine("Type your folder name");
                 string userInput = Console.ReadLine();
-                CreateDirectory($"{path}\\{userInput}");
-                Console.Clear();
-                Menu();
+                if (!Directory.Exists($"{path}\\{userInput}"))
+                {
+                    CreateDirectory($"{path}\\{userInput}");
+                    Console.WriteLine("Folder has been created!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Menu();
+                }
+                else
+                {
+                    Console.WriteLine("Folder already exists!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Menu();
+                }
+
+
             }
             catch (Exception)
             {
