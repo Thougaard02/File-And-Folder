@@ -210,8 +210,6 @@ namespace File_And_Folder
                     Console.Clear();
                     Menu();
                 }
-
-
             }
             catch (Exception)
             {
