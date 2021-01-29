@@ -111,7 +111,7 @@ namespace File_And_Folder
                     Console.WriteLine("does not exists");
                     CreateFile($"{userInput}.txt");
                     Console.WriteLine("File has been created!");
-                    Thread.Sleep(1000);
+                    Console.ReadKey();
                     Console.Clear();
                     Menu();
                 }
@@ -119,7 +119,7 @@ namespace File_And_Folder
                 {
                     Console.Clear();
                     Console.WriteLine("File already exists!");
-                    Thread.Sleep(500);
+                    Console.ReadKey();
                     Console.Clear();
                     Menu();
                 }
